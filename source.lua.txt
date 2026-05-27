@@ -2244,7 +2244,7 @@ function RayfieldLibrary:CreateWindow(Settings)
     FrmBaseUI.Parent = self.Elements
     FrmBaseUI.BackgroundColor3 = Color3.fromRGB(35, 35, 40)
     FrmBaseUI.BackgroundTransparency = 0.5
-    FrmBaseUI.Size = UDim2.new(1, -10, 0, 0)
+    FrmBaseUI.Size = UDim2.new(1, -10, 0, 150)
     FrmBaseUI.AutomaticSize = Enum.AutomaticSize.Y
 
     crnrBase.CornerRadius = UDim.new(0, 6)
@@ -2332,6 +2332,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 
     return vlrImgX
 end
+
 
 		-- ColorPicker
 		function Tab:CreateColorPicker(ColorPickerSettings) -- by Throit
