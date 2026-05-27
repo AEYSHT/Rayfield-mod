@@ -2244,7 +2244,7 @@ function RayfieldLibrary:CreateWindow(Settings)
     FrmBaseUI.Parent = self.Elements
     FrmBaseUI.BackgroundColor3 = Color3.fromRGB(35, 35, 40)
     FrmBaseUI.BackgroundTransparency = 0.5
-    FrmBaseUI.Size = UDim2.new(1, -10, 0, 150)
+    FrmBaseUI.Size = UDim2.new(1, -10, 0, 0)
     FrmBaseUI.AutomaticSize = Enum.AutomaticSize.Y
 
     crnrBase.CornerRadius = UDim.new(0, 6)
@@ -2279,7 +2279,7 @@ function RayfieldLibrary:CreateWindow(Settings)
     imgVisualZ.Name = "ImgGrafic"
     imgVisualZ.Parent = FrmBaseUI
     imgVisualZ.BackgroundTransparency = 1
-    imgVisualZ.Size = UDim2.new(1, 0, 0, 0)
+    imgVisualZ.Size = UDim2.new(1, 0, 0, 100)
     imgVisualZ.ScaleType = Enum.ScaleType.Fit
     imgVisualZ.ClipsDescendants = true
 
@@ -2304,7 +2304,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 
     aspRatioCtrl.Parent = imgVisualZ
     aspRatioCtrl.AspectRatio = calculatedRatio
-    aspRatioCtrl.AspectType = Enum.AspectType.FitWithinMaxSize
+    aspRatioCtrl.AspectType = Enum.AspectType.ScaleWithWidth
     aspRatioCtrl.DominantAxis = Enum.DominantAxis.Width
 
     local crnrImg = Instance.new("UICorner")
@@ -2330,12 +2330,8 @@ function RayfieldLibrary:CreateWindow(Settings)
         end
     end
 
-    table.insert(self.Modules, vlrImgX)
-    self:Resize()
-
     return vlrImgX
 end
-
 
 		-- ColorPicker
 		function Tab:CreateColorPicker(ColorPickerSettings) -- by Throit
